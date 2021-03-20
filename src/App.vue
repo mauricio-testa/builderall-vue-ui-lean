@@ -1,14 +1,13 @@
 <template>
   <div>
+    <TheNavbar />
 
-    <TheNavbar/>
+    <TheSidebar />
 
-    <TheSidebar/>
-
-    <TheNotifications/>
+    <TheNotifications />
 
     <bui-container :sidebar-state="$store.state.sidebarState">
-      <router-view></router-view>
+      <router-view />
     </bui-container>
   </div>
 </template>

@@ -19,25 +19,31 @@
     />
 
     <b-tabs>
-      <b-tab active title="Consultation">
+      <b-tab
+        active
+        title="Consultation"
+      >
         <div class="text-center">
-        <bui-form-group
-          label="Nome do calendario"
-          required
-          help="O nome deve ser bem legal"
-          max-chars="20"
-          :value="name_calendar"
-          :error="error"
-          class="text-left"
-        >
-          <b-input type="text" v-model="name_calendar"></b-input>
-        </bui-form-group>
-        <b-button variant="primary">Create calendar</b-button>
+          <bui-form-group
+            label="Nome do calendario"
+            required
+            help="O nome deve ser bem legal"
+            max-chars="20"
+            :value="name_calendar"
+            :error="error"
+            class="text-left"
+          >
+            <b-input
+              v-model="name_calendar"
+              type="text"
+            />
+          </bui-form-group>
+          <b-button variant="primary">
+            Create calendar
+          </b-button>
         </div>
       </b-tab>
-      <b-tab title="Event">
-
-      </b-tab>
+      <b-tab title="Event" />
     </b-tabs>
   </bui-page>
 </template>

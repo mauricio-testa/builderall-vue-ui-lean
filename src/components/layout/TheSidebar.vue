@@ -1,10 +1,10 @@
 <template>
   <bui-sidebar
-      :menus="menus"
-      :menus-bottom="menus_bottom"
-      :sidebar-state="$store.state.sidebarState"
-      :user="$store.state.user"
-    />
+    :menus="menus"
+    :menus-bottom="menus_bottom"
+    :sidebar-state="$store.state.sidebarState"
+    :user="$store.state.user"
+  />
 </template>
 
 <script>

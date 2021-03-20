@@ -2,7 +2,6 @@
   <bui-notifications
     :notifications="notifications"
     @shown="fetchNotifications"
-
   />
 </template>
 

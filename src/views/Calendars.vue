@@ -23,7 +23,10 @@
     />
 
     <b-tabs>
-      <b-tab active title="My calendars">
+      <b-tab
+        active
+        title="My calendars"
+      >
         <b-row class="bui-card-container">
           <b-col
             v-for="calendar in calendars"
@@ -32,26 +35,35 @@
             md="6"
             lg="4"
           >
-           <CalendarCard
+            <CalendarCard
               :calendar="calendar"
               @destroy="destroy"
-           >
-            <template>
-              <bui-icon name="open-blank" size="18" class="rtl-mirror"></bui-icon>
-            </template>
+            >
+              <template>
+                <bui-icon
+                  name="open-blank"
+                  size="18"
+                  class="rtl-mirror"
+                />
+              </template>
 
-            <template #admin>
-              <b-button variant="success">
-                <bui-icon name="gear" size="18" white></bui-icon>
-                admin</b-button>
-            </template>
+              <template #admin>
+                <b-button variant="success">
+                  <bui-icon
+                    name="gear"
+                    size="18"
+                    white
+                  />
+                  admin
+                </b-button>
+              </template>
 
-            <template #subscribers="data">
-              <b-badge>{{ data.data }}</b-badge>
+              <template #subscribers="data">
+                <b-badge>{{ data.data }}</b-badge>
 
-              Subcribers
-            </template>
-           </CalendarCard>
+                Subcribers
+              </template>
+            </CalendarCard>
           </b-col>
         </b-row>
       </b-tab>
@@ -64,10 +76,10 @@
             md="6"
             lg="4"
           >
-           <CalendarCard
+            <CalendarCard
               :calendar="calendar"
               @destroy="destroy"
-           />
+            />
           </b-col>
         </b-row>
       </b-tab>

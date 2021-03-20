@@ -6,22 +6,24 @@
     <template #header>
       <b-card-title class="d-flex justify-content-between">
         {{ calendar.title }}
-        <b-form-checkbox switch></b-form-checkbox>
+        <b-form-checkbox switch />
       </b-card-title>
     </template>
 
     <b-card-body>
-      <slot name="subscribers" :data="calendar.subscribers">
+      <slot
+        name="subscribers"
+        :data="calendar.subscribers"
+      >
         {{ calendar.subscribers }} subscribers
       </slot>
-
     </b-card-body>
 
     <b-card-footer>
       <slot name="admin">
-      <b-button variant="secondary">
-        Admin
-      </b-button>
+        <b-button variant="secondary">
+          Admin
+        </b-button>
       </slot>
       <div class="card-footer-right">
         <span>

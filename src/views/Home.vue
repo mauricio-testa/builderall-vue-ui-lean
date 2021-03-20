@@ -23,7 +23,9 @@
     />
 
     <InputButton
-     :options="['masculino', 'feminino', 'outros']" v-model="sexo"/>
+      v-model="sexo"
+      :options="['masculino', 'feminino', 'outros']"
+    />
     {{ sexo }}
   </bui-page>
 </template>
@@ -31,13 +33,13 @@
 <script>
 import InputButton from '../components/InputButton'
 export default {
+  components: {
+    InputButton
+  },
   data () {
     return {
       sexo: 'masculino'
     }
-  },
-  components: {
-    InputButton
   }
 }
 </script>
