@@ -1,18 +1,43 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <bui-page
+    title="Dashboard"
+    subtitle="Welcome to a Builderall application!"
+  >
+    <template #page-header-right>
+      <b-button
+        variant="primary"
+        class="ml-auto"
+        to="/create"
+      >
+        <bui-icon
+          name="plus"
+          white
+          :size="18"
+        />
+        New calendar
+      </b-button>
+    </template>
+    <bui-alert
+      index="alert-01"
+      content="Welcome!"
+    />
+
+    <InputButton
+     :options="['masculino', 'feminino', 'outros']" v-model="sexo"/>
+    {{ sexo }}
+  </bui-page>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import InputButton from '../components/InputButton'
 export default {
-  name: 'Home',
+  data () {
+    return {
+      sexo: 'masculino'
+    }
+  },
   components: {
-    HelloWorld
+    InputButton
   }
 }
 </script>
